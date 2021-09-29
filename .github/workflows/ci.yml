@@ -13,7 +13,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v1
       - name: Python
-        run: python3 -m pip install yaml jinja2
+        run: python3 -m pip install PyYAML jinja2
       - name: Build
         run: make
       - name: Upload handout
