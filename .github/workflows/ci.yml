@@ -14,6 +14,8 @@ jobs:
         uses: actions/checkout@v1
       - name: Build
         run: make
+      - name: Python
+        run: python -m pip install yaml jinja2
       - name: Upload handout
         uses: actions/upload-artifact@v2
         with:
