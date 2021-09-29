@@ -1,0 +1,12 @@
+# Résultats d'un étudiant
+---
+firstname: John
+lastname: Doe
+size: 6
+courses:
+    Allemand:
+        notes: [4.5, 3.5, 5.5, 5]
+    Anglais:
+        notes: [4.5, 4.2]
+    Histoire:
+        notes: [4.6]

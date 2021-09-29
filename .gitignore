@@ -1,0 +1,7 @@
+*.fls
+*.log
+*.pdf
+*.aux
+*_latexmk
+__pycache__/
+notes.tex

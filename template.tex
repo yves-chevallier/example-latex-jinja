@@ -1,0 +1,21 @@
+\documentclass[a4paper, 12pt]{article}
+\usepackage[french]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+\begin{document}
+\begin{center}\bfseries\Large
+\begin{tabular}{l*\VAR{nb_notes}{r}r}
+    Branche &\BLOCK{ for i in range(1, nb_notes + 1)} \VAR{i} &\BLOCK{ endfor }
+    Moyenne \\ \hline
+
+    \BLOCK{ for name, values in data.items() }
+        \VAR{name} &
+        \BLOCK{ for note in values['notes'] }
+            \VAR{note if note else '-'} &
+        \BLOCK{ endfor }
+        \VAR{values['mean']} \\
+    \BLOCK{ endfor }
+\end{tabular}
+\end{center}
+\end{document}
