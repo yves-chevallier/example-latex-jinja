@@ -1,0 +1,21 @@
+on:
+  push:
+    branches:
+      - master
+  create:
+    tags:
+jobs:
+  build:
+    name: Build Project
+    runs-on: ubuntu-latest
+    container: nowox/latex:2
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v1
+      - name: Build
+        run: make
+      - name: Upload handout
+        uses: actions/upload-artifact@v2
+        with:
+          name: pdf
+          path: notes.pdf
